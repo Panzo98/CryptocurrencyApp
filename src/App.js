@@ -10,6 +10,7 @@ import {
   News,
 } from "./components";
 import "./App.css";
+import { cryptoNewsApi } from "./services/cryptoNewsApi";
 const App = () => {
   return (
     <div className="app">
@@ -36,7 +37,7 @@ const App = () => {
                 path="/crypto/:coinId"
                 element={<CryptoDetails></CryptoDetails>}
               ></Route>
-              <Route exact path="/news" element={<News />}></Route>
+              <Route exact path="/news" element={<News></News>}></Route>
             </Routes>
           </div>
         </Layout>

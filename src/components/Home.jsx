@@ -4,12 +4,12 @@ import { Cryptocurrencies, News } from ".";
 import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "../services/cryptoApi";
+
 const { Title } = Typography;
 
 export default function Home() {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
-  console.log(globalStats);
   if (isFetching) return "Loading...";
   return (
     <>
